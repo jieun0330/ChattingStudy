@@ -14,6 +14,11 @@
 		C2EC14BA2B52551400F75A3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2EC14B92B52551400F75A3B /* Assets.xcassets */; };
 		C2EC14BD2B52551400F75A3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2EC14BB2B52551400F75A3B /* LaunchScreen.storyboard */; };
 		C2EC14C52B52553700F75A3B /* ChattingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EC14C42B52553700F75A3B /* ChattingData.swift */; };
+		C2EC14CC2B525B7500F75A3B /* TravelTalkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EC14CA2B525B7500F75A3B /* TravelTalkTableViewCell.swift */; };
+		C2EC14CD2B525B7500F75A3B /* TravelTalkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2EC14CB2B525B7500F75A3B /* TravelTalkTableViewCell.xib */; };
+		C2EC14D12B52C12900F75A3B /* ChatScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EC14D02B52C12900F75A3B /* ChatScreenViewController.swift */; };
+		C2EC14D42B52C2DA00F75A3B /* ChatScreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EC14D22B52C2DA00F75A3B /* ChatScreenTableViewCell.swift */; };
+		C2EC14D52B52C2DA00F75A3B /* ChatScreenTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2EC14D32B52C2DA00F75A3B /* ChatScreenTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		C2EC14BC2B52551400F75A3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C2EC14BE2B52551400F75A3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2EC14C42B52553700F75A3B /* ChattingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChattingData.swift; sourceTree = "<group>"; };
+		C2EC14CA2B525B7500F75A3B /* TravelTalkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTalkTableViewCell.swift; sourceTree = "<group>"; };
+		C2EC14CB2B525B7500F75A3B /* TravelTalkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TravelTalkTableViewCell.xib; sourceTree = "<group>"; };
+		C2EC14D02B52C12900F75A3B /* ChatScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreenViewController.swift; sourceTree = "<group>"; };
+		C2EC14D22B52C2DA00F75A3B /* ChatScreenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreenTableViewCell.swift; sourceTree = "<group>"; };
+		C2EC14D32B52C2DA00F75A3B /* ChatScreenTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatScreenTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +49,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C2644FEB2B540CC3007F086D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C2EC14B62B52551200F75A3B /* Main.storyboard */,
+				C2EC14B42B52551200F75A3B /* ViewController.swift */,
+				C2644FEC2B540CDD007F086D /* TravelTalkCell */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		C2644FEC2B540CDD007F086D /* TravelTalkCell */ = {
+			isa = PBXGroup;
+			children = (
+				C2EC14CA2B525B7500F75A3B /* TravelTalkTableViewCell.swift */,
+				C2EC14CB2B525B7500F75A3B /* TravelTalkTableViewCell.xib */,
+			);
+			path = TravelTalkCell;
+			sourceTree = "<group>";
+		};
+		C2644FED2B540CEB007F086D /* ChatScreenCell */ = {
+			isa = PBXGroup;
+			children = (
+				C2EC14D32B52C2DA00F75A3B /* ChatScreenTableViewCell.xib */,
+				C2EC14D22B52C2DA00F75A3B /* ChatScreenTableViewCell.swift */,
+			);
+			path = ChatScreenCell;
+			sourceTree = "<group>";
+		};
+		C2644FEE2B540D11007F086D /* ChatScreen */ = {
+			isa = PBXGroup;
+			children = (
+				C2644FED2B540CEB007F086D /* ChatScreenCell */,
+				C2EC14D02B52C12900F75A3B /* ChatScreenViewController.swift */,
+			);
+			path = ChatScreen;
+			sourceTree = "<group>";
+		};
+		C2644FEF2B540E28007F086D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C2EC14C42B52553700F75A3B /* ChattingData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		C2EC14A42B52551200F75A3B = {
 			isa = PBXGroup;
 			children = (
@@ -60,12 +115,12 @@
 			children = (
 				C2EC14B02B52551200F75A3B /* AppDelegate.swift */,
 				C2EC14B22B52551200F75A3B /* SceneDelegate.swift */,
-				C2EC14B42B52551200F75A3B /* ViewController.swift */,
-				C2EC14B62B52551200F75A3B /* Main.storyboard */,
-				C2EC14B92B52551400F75A3B /* Assets.xcassets */,
 				C2EC14BB2B52551400F75A3B /* LaunchScreen.storyboard */,
 				C2EC14BE2B52551400F75A3B /* Info.plist */,
-				C2EC14C42B52553700F75A3B /* ChattingData.swift */,
+				C2EC14B92B52551400F75A3B /* Assets.xcassets */,
+				C2644FEB2B540CC3007F086D /* Main */,
+				C2644FEE2B540D11007F086D /* ChatScreen */,
+				C2644FEF2B540E28007F086D /* Data */,
 			);
 			path = SeSAC_HW_ChattingData;
 			sourceTree = "<group>";
@@ -129,8 +184,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2EC14BD2B52551400F75A3B /* LaunchScreen.storyboard in Resources */,
+				C2EC14CD2B525B7500F75A3B /* TravelTalkTableViewCell.xib in Resources */,
 				C2EC14BA2B52551400F75A3B /* Assets.xcassets in Resources */,
 				C2EC14B82B52551200F75A3B /* Main.storyboard in Resources */,
+				C2EC14D52B52C2DA00F75A3B /* ChatScreenTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +202,9 @@
 				C2EC14C52B52553700F75A3B /* ChattingData.swift in Sources */,
 				C2EC14B12B52551200F75A3B /* AppDelegate.swift in Sources */,
 				C2EC14B32B52551200F75A3B /* SceneDelegate.swift in Sources */,
+				C2EC14D42B52C2DA00F75A3B /* ChatScreenTableViewCell.swift in Sources */,
+				C2EC14D12B52C12900F75A3B /* ChatScreenViewController.swift in Sources */,
+				C2EC14CC2B525B7500F75A3B /* TravelTalkTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

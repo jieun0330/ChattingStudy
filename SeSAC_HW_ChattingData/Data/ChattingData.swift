@@ -30,13 +30,21 @@ struct ChatRoom {
     var chatList: [Chat] = [] //채팅 화면에서 사용할 데이터
 }
 
+class someClass {
+    let name: String
+    let age: Int
+    init(name: String, age: Int) {
+        self.name = name
+        self.age = age
+    }
+}
+
 //채팅 화면에서 사용할 데이터 구조체
 struct Chat {
     let user: User
     let date: String
     let message: String
 }
-
 
 let mockChatList: [ChatRoom] = [
     ChatRoom(chatroomId: 1,
@@ -78,7 +86,7 @@ let mockChatList: [ChatRoom] = [
                      message: "화이팅 ^^"),
              ]),
     ChatRoom(chatroomId: 3,
-             chatroomImage: [User.hue.profileImage],
+             chatroomImage: [User.jack.profileImage],
              chatroomName: User.jack.rawValue,
              chatList: [
                 Chat(user: .jack,
