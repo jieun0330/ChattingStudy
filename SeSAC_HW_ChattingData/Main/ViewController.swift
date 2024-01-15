@@ -16,6 +16,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         navigationItem.title = "TRAVEL TALK"
+        navigationItem.backButtonTitle = ""
+        
         searchBar.placeholder = "친구 이름을 검색해보세요"
         
         configureUI()
@@ -61,6 +63,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.profileImage.image = UIImage(named: mockChatList[indexPath.row].chatroomImage[0])
         cell.profileName.text = mockChatList[indexPath.row].chatroomName
         cell.talkLabel.text = mockChatList[indexPath.row].chatList.last!.message
+        cell.talkLabel.numberOfLines = 0
         
         let stringFormatter = DateFormatter()
         stringFormatter.dateFormat = "yyyy-MM-dd HH:mm"

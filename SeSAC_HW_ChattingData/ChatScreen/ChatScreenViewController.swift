@@ -17,7 +17,10 @@ class ChatScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         configureUI()
+        
         
     }
 }
@@ -29,6 +32,11 @@ extension ChatScreenViewController {
         
         let xib = UINib(nibName: ChatScreenTableViewCell.identifier, bundle: nil)
         chatView.register(xib, forCellReuseIdentifier: ChatScreenTableViewCell.identifier)
+        
+        let xib2 = UINib(nibName: UserChatTableViewCell.identifier, bundle: nil)
+        chatView.register(xib2, forCellReuseIdentifier: UserChatTableViewCell.identifier)
+        
+        navigationItem.title = chatRoomName
     }
     
 }
@@ -42,26 +50,56 @@ extension ChatScreenViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ChatScreenTableViewCell", for: indexPath) as! ChatScreenTableViewCell
-        let chat = chatList[indexPath.row]
-        cell.profileImage.image = UIImage(named: chat.user.profileImage)
-        cell.userName.text = chat.user.rawValue
-        cell.chatLabel.text = chat.message
-        
-        let stringFormatter = DateFormatter()
-        stringFormatter.dateFormat = "yyyy-MM-dd HH:mm"
-        let date = stringFormatter.date(from: chat.date)
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "HH:mm a"
-        let dateString = dateFormatter.string(from: date!)
-        cell.chatDate.text = dateString
         
         tableView.separatorStyle = .none
+        let chat = chatList[indexPath.row]
         
-        return cell
+        if chat.user == .user {
+            let cell = tableView.dequeueReusableCell(withIdentifier: UserChatTableViewCell.identifier, for: indexPath) as! UserChatTableViewCell
+            
+            cell.selectionStyle = .none
+
+            cell.userChat.text = chat.message
+            cell.userChat.numberOfLines = 0
+            
+            let stringFormatter = DateFormatter()
+            stringFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+            let date = stringFormatter.date(from: chat.date)
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "hh:mm a"
+            dateFormatter.locale = Locale(identifier: "ko_KR")
+            let dateString = dateFormatter.string(from: date!)
+            cell.dateLabel.text = dateString
+            
+            
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: ChatScreenTableViewCell.identifier, for: indexPath) as! ChatScreenTableViewCell
+            
+            cell.selectionStyle = .none
+
+            cell.profileImage.image = UIImage(named: chat.user.profileImage)
+            cell.userName.text = chat.user.rawValue
+            
+            cell.chatLabel.text = chat.message
+            cell.chatLabel.numberOfLines = 0
+            
+            let stringFormatter = DateFormatter()
+            stringFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+            let date = stringFormatter.date(from: chat.date)
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "hh:mm a"
+            dateFormatter.locale = Locale(identifier: "ko_KR")
+            let dateString = dateFormatter.string(from: date!)
+            cell.chatDate.text = dateString
+            
+            return cell
+        }
+        
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 80
     }
 }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C263A85F2B55515C006BB0E5 /* UserChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263A85D2B55515C006BB0E5 /* UserChatTableViewCell.swift */; };
+		C263A8602B55515C006BB0E5 /* UserChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C263A85E2B55515C006BB0E5 /* UserChatTableViewCell.xib */; };
+		C263A8632B555619006BB0E5 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263A8622B555619006BB0E5 /* Protocol.swift */; };
 		C2EC14B12B52551200F75A3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EC14B02B52551200F75A3B /* AppDelegate.swift */; };
 		C2EC14B32B52551200F75A3B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EC14B22B52551200F75A3B /* SceneDelegate.swift */; };
 		C2EC14B52B52551200F75A3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EC14B42B52551200F75A3B /* ViewController.swift */; };
@@ -22,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C263A85D2B55515C006BB0E5 /* UserChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChatTableViewCell.swift; sourceTree = "<group>"; };
+		C263A85E2B55515C006BB0E5 /* UserChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserChatTableViewCell.xib; sourceTree = "<group>"; };
+		C263A8622B555619006BB0E5 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		C2EC14AD2B52551200F75A3B /* SeSAC_HW_ChattingData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSAC_HW_ChattingData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2EC14B02B52551200F75A3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2EC14B22B52551200F75A3B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C263A8612B555612006BB0E5 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				C263A8622B555619006BB0E5 /* Protocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		C2644FEB2B540CC3007F086D /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +85,8 @@
 		C2644FED2B540CEB007F086D /* ChatScreenCell */ = {
 			isa = PBXGroup;
 			children = (
+				C263A85D2B55515C006BB0E5 /* UserChatTableViewCell.swift */,
+				C263A85E2B55515C006BB0E5 /* UserChatTableViewCell.xib */,
 				C2EC14D32B52C2DA00F75A3B /* ChatScreenTableViewCell.xib */,
 				C2EC14D22B52C2DA00F75A3B /* ChatScreenTableViewCell.swift */,
 			);
@@ -113,6 +129,7 @@
 		C2EC14AF2B52551200F75A3B /* SeSAC_HW_ChattingData */ = {
 			isa = PBXGroup;
 			children = (
+				C263A8612B555612006BB0E5 /* Protocol */,
 				C2EC14B02B52551200F75A3B /* AppDelegate.swift */,
 				C2EC14B22B52551200F75A3B /* SceneDelegate.swift */,
 				C2EC14BB2B52551400F75A3B /* LaunchScreen.storyboard */,
@@ -187,6 +204,7 @@
 				C2EC14CD2B525B7500F75A3B /* TravelTalkTableViewCell.xib in Resources */,
 				C2EC14BA2B52551400F75A3B /* Assets.xcassets in Resources */,
 				C2EC14B82B52551200F75A3B /* Main.storyboard in Resources */,
+				C263A8602B55515C006BB0E5 /* UserChatTableViewCell.xib in Resources */,
 				C2EC14D52B52C2DA00F75A3B /* ChatScreenTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -198,10 +216,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C263A85F2B55515C006BB0E5 /* UserChatTableViewCell.swift in Sources */,
 				C2EC14B52B52551200F75A3B /* ViewController.swift in Sources */,
 				C2EC14C52B52553700F75A3B /* ChattingData.swift in Sources */,
 				C2EC14B12B52551200F75A3B /* AppDelegate.swift in Sources */,
 				C2EC14B32B52551200F75A3B /* SceneDelegate.swift in Sources */,
+				C263A8632B555619006BB0E5 /* Protocol.swift in Sources */,
 				C2EC14D42B52C2DA00F75A3B /* ChatScreenTableViewCell.swift in Sources */,
 				C2EC14D12B52C12900F75A3B /* ChatScreenViewController.swift in Sources */,
 				C2EC14CC2B525B7500F75A3B /* TravelTalkTableViewCell.swift in Sources */,

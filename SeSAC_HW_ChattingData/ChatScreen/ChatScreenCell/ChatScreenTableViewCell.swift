@@ -7,15 +7,14 @@
 
 import UIKit
 
-class ChatScreenTableViewCell: UITableViewCell {
+class ChatScreenTableViewCell: UITableViewCell, ReusableProtocol {
     
     @IBOutlet var profileImage: UIImageView!
     @IBOutlet var userName: UILabel!
     @IBOutlet var chatLabel: UILabel!
+    @IBOutlet var chatBorder: UILabel!
     @IBOutlet var chatDate: UILabel!
-    
-    static let identifier = "ChatScreenTableViewCell"
-    
+        
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -23,9 +22,15 @@ class ChatScreenTableViewCell: UITableViewCell {
         profileImage.layer.masksToBounds = true
         profileImage.layer.cornerRadius = profileImage.frame.height / 2
         profileImage.clipsToBounds = true
+        profileImage.layer.borderColor = UIColor.gray.cgColor
+        profileImage.layer.borderWidth = 0.3
         
-        chatLabel.layer.borderColor = UIColor.gray.cgColor
-        chatLabel.layer.borderWidth = 1
+        chatBorder.layer.borderColor = UIColor.gray.cgColor
+        chatBorder.layer.borderWidth = 1
+        chatBorder.layer.cornerRadius = 8
         
+        chatLabel.font = UIFont.systemFont(ofSize: 14)
+        
+                
     }
 }
