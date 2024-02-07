@@ -37,6 +37,12 @@ extension ChatScreenViewController {
         chatView.register(xib2, forCellReuseIdentifier: UserChatTableViewCell.identifier)
         
         navigationItem.title = chatRoomName
+        
+        chatView.rowHeight = UITableView.automaticDimension
+        
+
+        
+
     }
     
 }
@@ -71,6 +77,14 @@ extension ChatScreenViewController: UITableViewDelegate, UITableViewDataSource {
             let dateString = dateFormatter.string(from: date!)
             cell.dateLabel.text = dateString
             
+            cell.layer.borderColor = UIColor.red.cgColor
+            cell.layer.borderWidth = 1
+            
+            
+            
+//            chatView.rowHeight = UITableView.automaticDimension
+
+            
             
             return cell
         } else {
@@ -98,8 +112,13 @@ extension ChatScreenViewController: UITableViewDelegate, UITableViewDataSource {
         
         
     }
+
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 80
+        
+//        chatView.rowHeight = UITableView.automaticDimension
+//        return tableView.automatic
+        
+//    }
 }

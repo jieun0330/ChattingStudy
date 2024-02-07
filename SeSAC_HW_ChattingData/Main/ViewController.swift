@@ -36,6 +36,10 @@ extension ViewController {
         
         let xib = UINib(nibName: TravelTalkTableViewCell.identifier, bundle: nil)
         talkView.register(xib, forCellReuseIdentifier: TravelTalkTableViewCell.identifier)
+        
+//        talkView.rowHeight = UITableView.automaticDimension
+//        chatView.rowHeight = UITableView.automaticDimension
+
     }
 }
 
@@ -55,6 +59,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.selectionStyle = .none
         cell.profileImage.image = UIImage(named: mockChatList[indexPath.row].chatroomImage[0])
         cell.profileName.text = mockChatList[indexPath.row].chatroomName
+        // 최근 메세지로 보여주게 하기
         cell.talkLabel.text = mockChatList[indexPath.row].chatList.last!.message
         cell.talkLabel.numberOfLines = 0
         

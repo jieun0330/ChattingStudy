@@ -18,17 +18,17 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="41z-bx-hq4">
-                        <rect key="frame" x="254" y="8" width="50" height="29"/>
+                        <rect key="frame" x="254" y="7.9999999999999982" width="50" height="28.333333333333329"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5v-PL-S9M">
-                        <rect key="frame" x="258" y="12" width="42" height="21"/>
+                        <rect key="frame" x="258" y="11.999999999999998" width="42" height="20.333333333333329"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="88:88 오후" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ErV-6D-gGS">
-                        <rect key="frame" x="186" y="22" width="60" height="15"/>
+                        <rect key="frame" x="186" y="21.333333333333332" width="60" height="14.999999999999996"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="60" id="ug2-hx-7lt"/>
                         </constraints>
@@ -45,6 +45,7 @@
                     <constraint firstItem="41z-bx-hq4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="blr-D9-c7d"/>
                     <constraint firstItem="41z-bx-hq4" firstAttribute="leading" secondItem="ErV-6D-gGS" secondAttribute="trailing" constant="8" id="fbO-O0-dCD"/>
                     <constraint firstItem="ErV-6D-gGS" firstAttribute="bottom" secondItem="41z-bx-hq4" secondAttribute="bottom" id="gEB-LH-KYR"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="41z-bx-hq4" secondAttribute="bottom" constant="8" id="qtJ-93-Cy0"/>
                     <constraint firstItem="j5v-PL-S9M" firstAttribute="trailing" secondItem="41z-bx-hq4" secondAttribute="trailing" constant="-4" id="rvH-16-2oz"/>
                     <constraint firstItem="j5v-PL-S9M" firstAttribute="top" secondItem="41z-bx-hq4" secondAttribute="top" constant="4" id="sey-ZR-y0i"/>
                 </constraints>
