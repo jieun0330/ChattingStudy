@@ -27,6 +27,7 @@ extension ViewController {
         navigationItem.title = "TRAVEL TALK"
         navigationItem.backButtonTitle = ""
         navigationController?.hidesBarsOnSwipe = true
+        navigationController?.navigationBar.tintColor = .black
         
         searchBar.placeholder = "친구 이름을 검색해보세요"
         
