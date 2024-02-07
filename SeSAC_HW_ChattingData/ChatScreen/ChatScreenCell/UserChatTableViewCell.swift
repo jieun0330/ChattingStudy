@@ -16,7 +16,6 @@ class UserChatTableViewCell: UITableViewCell, ReusableProtocol {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        
         chatBorder.layer.borderColor = UIColor.gray.cgColor
         chatBorder.layer.borderWidth = 1
         chatBorder.layer.cornerRadius = 8
@@ -24,7 +23,5 @@ class UserChatTableViewCell: UITableViewCell, ReusableProtocol {
         
         userChat.font = UIFont.systemFont(ofSize: 14)
                 
-        
-    }
-    
+    }    
 }

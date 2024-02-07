@@ -7,15 +7,13 @@
 
 import UIKit
 
-class TravelTalkTableViewCell: UITableViewCell {
+class TravelTalkTableViewCell: UITableViewCell, ReusableProtocol {
     
     @IBOutlet var profileImage: UIImageView!
     @IBOutlet var profileName: UILabel!
     @IBOutlet var talkLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
-    
-    static let identifier = "TravelTalkTableViewCell"
-    
+        
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -24,6 +22,17 @@ class TravelTalkTableViewCell: UITableViewCell {
         profileImage.layer.cornerRadius = profileImage.frame.height / 2
         profileImage.clipsToBounds = true
         
+        profileImage.layer.borderColor = UIColor.gray.cgColor
+        profileImage.layer.borderWidth = 1
+//        chatBorder.layer.cornerRadius = 8
+        
+//        profileImage.contentMode = .scaleAspectFit
+//        profileImage.layer.masksToBounds = true
+//        profileImage.layer.cornerRadius = profileImage.frame.height / 2
+//        profileImage.clipsToBounds = true
+//        profileImage.layer.borderColor = UIColor.gray.cgColor
+//        profileImage.layer.borderWidth = 0.3
+        
         profileName.font = UIFont.boldSystemFont(ofSize: 16)
         
         talkLabel.textColor = .gray
@@ -31,6 +40,5 @@ class TravelTalkTableViewCell: UITableViewCell {
         
         dateLabel.font = UIFont.systemFont(ofSize: 12)
         dateLabel.textColor = .gray
-        
     }
 }

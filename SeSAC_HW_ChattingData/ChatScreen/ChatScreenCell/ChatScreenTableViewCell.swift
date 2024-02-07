@@ -29,8 +29,6 @@ class ChatScreenTableViewCell: UITableViewCell, ReusableProtocol {
         chatBorder.layer.borderWidth = 1
         chatBorder.layer.cornerRadius = 8
         
-        chatLabel.font = UIFont.systemFont(ofSize: 14)
-        
-                
+        chatLabel.font = UIFont.systemFont(ofSize: 14)        
     }
 }

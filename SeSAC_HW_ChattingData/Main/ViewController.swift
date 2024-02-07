@@ -15,49 +15,41 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "TRAVEL TALK"
-        navigationItem.backButtonTitle = ""
-        
-        searchBar.placeholder = "친구 이름을 검색해보세요"
-        
         configureUI()
         
-        navigationController?.hidesBarsOnSwipe = true
     }
 }
 
 extension ViewController {
     
     func configureUI() {
+        
+        navigationItem.title = "TRAVEL TALK"
+        navigationItem.backButtonTitle = ""
+        navigationController?.hidesBarsOnSwipe = true
+        
+        searchBar.placeholder = "친구 이름을 검색해보세요"
+        
         talkView.delegate = self
         talkView.dataSource = self
         
         let xib = UINib(nibName: TravelTalkTableViewCell.identifier, bundle: nil)
         talkView.register(xib, forCellReuseIdentifier: TravelTalkTableViewCell.identifier)
-        
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let chatSB = UIStoryboard(name: "Main", bundle: nil)
-        let chatVC = chatSB.instantiateViewController(identifier: "ChatScreenViewController") as! ChatScreenViewController
-        chatVC.chatRoomName = mockChatList[indexPath.row].chatroomName
-        chatVC.chatList = mockChatList[indexPath.row].chatList
-        
-        navigationController?.pushViewController(chatVC, animated: true)
     }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
-    //Mark: - section의 개수
+    // section의 개수
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         mockChatList.count
+        
     }
     
-    //Mark: - cell 구성
+    // cell 구성
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TravelTalkTableViewCell", for: indexPath) as! TravelTalkTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: TravelTalkTableViewCell.identifier, for: indexPath) as! TravelTalkTableViewCell
         
         cell.selectionStyle = .none
         cell.profileImage.image = UIImage(named: mockChatList[indexPath.row].chatroomImage[0])
@@ -77,4 +69,15 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let chatSB = UIStoryboard(name: "Main", bundle: nil)
+        let chatVC = chatSB.instantiateViewController(identifier: ChatScreenViewController.identifier) as! ChatScreenViewController
+        chatVC.chatRoomName = mockChatList[indexPath.row].chatroomName
+        chatVC.chatList = mockChatList[indexPath.row].chatList
+        
+        navigationController?.pushViewController(chatVC, animated: true)
+    }
+
+    
 }

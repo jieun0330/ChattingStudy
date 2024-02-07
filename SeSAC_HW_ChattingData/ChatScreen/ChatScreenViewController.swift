@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ChatScreenViewController: UIViewController {
+class ChatScreenViewController: UIViewController, ReusableProtocol {
     
     @IBOutlet var chatView: UITableView!
     
