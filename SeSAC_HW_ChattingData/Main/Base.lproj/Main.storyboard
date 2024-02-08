@@ -96,16 +96,24 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8g-EV-kMl">
+                                <rect key="frame" x="344" y="753" width="24" height="40"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Ao-58-Vb7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="b8g-EV-kMl" firstAttribute="top" secondItem="T1X-rI-zoL" secondAttribute="bottom" constant="5" id="0Qj-j7-xZI"/>
                             <constraint firstItem="Rrk-Tn-RVS" firstAttribute="top" secondItem="T1X-rI-zoL" secondAttribute="bottom" id="5T1-dS-5Zr"/>
                             <constraint firstItem="6Ao-58-Vb7" firstAttribute="trailing" secondItem="Rrk-Tn-RVS" secondAttribute="trailing" constant="20" id="Cu3-Fb-5BF"/>
                             <constraint firstItem="Rrk-Tn-RVS" firstAttribute="leading" secondItem="6Ao-58-Vb7" secondAttribute="leading" constant="20" id="IOb-tq-fVx"/>
                             <constraint firstItem="T1X-rI-zoL" firstAttribute="top" secondItem="6Ao-58-Vb7" secondAttribute="top" constant="1" id="NRb-eH-2xa"/>
+                            <constraint firstItem="Rrk-Tn-RVS" firstAttribute="bottom" secondItem="b8g-EV-kMl" secondAttribute="bottom" constant="5" id="Npc-Ua-YGE"/>
                             <constraint firstItem="T1X-rI-zoL" firstAttribute="trailing" secondItem="6Ao-58-Vb7" secondAttribute="trailing" id="OZH-bH-RTj"/>
+                            <constraint firstItem="Rrk-Tn-RVS" firstAttribute="trailing" secondItem="b8g-EV-kMl" secondAttribute="trailing" constant="5" id="RHZ-er-qkf"/>
                             <constraint firstItem="6Ao-58-Vb7" firstAttribute="bottom" secondItem="Rrk-Tn-RVS" secondAttribute="bottom" constant="20" id="cup-as-KbS"/>
                             <constraint firstItem="T1X-rI-zoL" firstAttribute="leading" secondItem="6Ao-58-Vb7" secondAttribute="leading" id="tw1-jl-kHq"/>
                         </constraints>
@@ -117,6 +125,7 @@
                     <connections>
                         <outlet property="chatTextField" destination="Rrk-Tn-RVS" id="UwZ-OK-8tW"/>
                         <outlet property="chatView" destination="T1X-rI-zoL" id="ftC-c9-vbe"/>
+                        <outlet property="sendButton" destination="b8g-EV-kMl" id="W7T-9F-qpU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JJl-st-D0l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

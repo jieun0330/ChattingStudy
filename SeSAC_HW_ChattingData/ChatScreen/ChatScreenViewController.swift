@@ -11,6 +11,7 @@ class ChatScreenViewController: UIViewController, ReusableProtocol {
     
     @IBOutlet var chatView: UITableView!
     @IBOutlet var chatTextField: UITextField!
+    @IBOutlet var sendButton: UIButton!
     
     var chatList: [Chat] = []
     var chatRoomName: String = ""
@@ -50,6 +51,9 @@ extension ChatScreenViewController {
         chatTextField.placeholder = "메세지를 입력하세요"
         chatTextField.backgroundColor = .systemGray6
         chatTextField.delegate = self
+        
+        sendButton.setImage(UIImage(systemName: "paperplane"), for: .normal)
+        sendButton.tintColor = .lightGray
         
 
     }
