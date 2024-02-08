@@ -11,7 +11,8 @@ class ChatScreenViewController: UIViewController, ReusableProtocol {
     
     @IBOutlet var chatView: UITableView!
 //    @IBOutlet var chatTextView: UIView!
-    @IBOutlet var chatTextField: UITextField!
+    @IBOutlet var chatTextView: UITextView!
+//    @IBOutlet var chatTextField: UITextField!
     @IBOutlet var sendButton: UIButton!
     
     var chatList: [Chat] = []
@@ -65,8 +66,15 @@ extension ChatScreenViewController {
         
         chatView.rowHeight = UITableView.automaticDimension
         
-        chatTextField.placeholder = "메세지를 입력하세요"
-        chatTextField.backgroundColor = .systemGray6
+        chatTextView.text = "메시지를 입력하세요"
+        chatTextView.textColor = .lightGray
+        chatTextView.backgroundColor = .systemGray6
+        chatTextView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 0)
+//        chatTextView.textAlignment = .center
+        
+//        chatTextField.placeholder = "메세지를 입력하세요"
+//        chatTextField.backgroundColor = .systemGray6
+        
 //        chatTextField.delegate = self
         
         sendButton.setImage(UIImage(systemName: "paperplane"), for: .normal)

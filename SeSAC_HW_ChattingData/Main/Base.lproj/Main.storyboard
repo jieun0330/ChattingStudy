@@ -91,29 +91,30 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wya-rK-AB0">
                                 <rect key="frame" x="0.0" y="728" width="393" height="90"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rrk-Tn-RVS">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jE9-CX-0Mz">
                                         <rect key="frame" x="20" y="20" width="353" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="Evc-Mz-NYZ"/>
+                                            <constraint firstAttribute="height" constant="50" id="uq1-db-zsV"/>
                                         </constraints>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8g-EV-kMl">
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8g-EV-kMl">
                                         <rect key="frame" x="344" y="25" width="24" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title=""/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="Rrk-Tn-RVS" firstAttribute="bottom" secondItem="b8g-EV-kMl" secondAttribute="bottom" constant="5" id="DoZ-tZ-pxI"/>
-                                    <constraint firstItem="b8g-EV-kMl" firstAttribute="top" secondItem="Rrk-Tn-RVS" secondAttribute="top" constant="5" id="KLB-w0-A8Z"/>
-                                    <constraint firstItem="Rrk-Tn-RVS" firstAttribute="leading" secondItem="Wya-rK-AB0" secondAttribute="leading" constant="20" id="O1R-Kt-aw4"/>
-                                    <constraint firstAttribute="bottom" secondItem="Rrk-Tn-RVS" secondAttribute="bottom" constant="20" id="OBc-dg-7F7"/>
-                                    <constraint firstItem="Rrk-Tn-RVS" firstAttribute="trailing" secondItem="b8g-EV-kMl" secondAttribute="trailing" constant="5" id="QlE-Ra-ohQ"/>
-                                    <constraint firstAttribute="trailing" secondItem="Rrk-Tn-RVS" secondAttribute="trailing" constant="20" id="RQy-nh-1zb"/>
-                                    <constraint firstItem="Rrk-Tn-RVS" firstAttribute="top" secondItem="Wya-rK-AB0" secondAttribute="top" constant="20" id="kGz-ds-FET"/>
+                                    <constraint firstAttribute="trailing" secondItem="jE9-CX-0Mz" secondAttribute="trailing" constant="20" id="8pq-aD-Sfh"/>
+                                    <constraint firstItem="jE9-CX-0Mz" firstAttribute="leading" secondItem="Wya-rK-AB0" secondAttribute="leading" constant="20" id="D99-cK-LFL"/>
+                                    <constraint firstItem="jE9-CX-0Mz" firstAttribute="top" secondItem="Wya-rK-AB0" secondAttribute="top" constant="20" id="Fak-qn-gOq"/>
+                                    <constraint firstAttribute="bottom" secondItem="jE9-CX-0Mz" secondAttribute="bottom" constant="20" id="fRW-mq-nhw"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -122,12 +123,12 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Wya-rK-AB0" firstAttribute="trailing" secondItem="6Ao-58-Vb7" secondAttribute="trailing" id="8Hq-qA-h3g"/>
-                            <constraint firstItem="T1X-rI-zoL" firstAttribute="top" secondItem="6Ao-58-Vb7" secondAttribute="top" constant="1" id="NRb-eH-2xa"/>
                             <constraint firstItem="T1X-rI-zoL" firstAttribute="trailing" secondItem="6Ao-58-Vb7" secondAttribute="trailing" id="OZH-bH-RTj"/>
                             <constraint firstItem="6Ao-58-Vb7" firstAttribute="bottom" secondItem="Wya-rK-AB0" secondAttribute="bottom" id="boF-L1-CAQ"/>
                             <constraint firstItem="Wya-rK-AB0" firstAttribute="top" secondItem="T1X-rI-zoL" secondAttribute="bottom" id="hgW-0x-UT4"/>
                             <constraint firstItem="T1X-rI-zoL" firstAttribute="leading" secondItem="6Ao-58-Vb7" secondAttribute="leading" id="tw1-jl-kHq"/>
                             <constraint firstItem="Wya-rK-AB0" firstAttribute="leading" secondItem="6Ao-58-Vb7" secondAttribute="leading" id="uw2-c3-3VG"/>
+                            <constraint firstItem="T1X-rI-zoL" firstAttribute="top" secondItem="6Ao-58-Vb7" secondAttribute="top" constant="1" id="xda-OC-Wp0"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="m2u-61-B57" appends="YES" id="EEL-vp-evo"/>
@@ -135,7 +136,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="qfO-vl-tNs"/>
                     <connections>
-                        <outlet property="chatTextField" destination="Rrk-Tn-RVS" id="UwZ-OK-8tW"/>
+                        <outlet property="chatTextView" destination="jE9-CX-0Mz" id="Db3-HG-LGZ"/>
                         <outlet property="chatView" destination="T1X-rI-zoL" id="ftC-c9-vbe"/>
                         <outlet property="sendButton" destination="b8g-EV-kMl" id="W7T-9F-qpU"/>
                     </connections>
@@ -151,6 +152,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
