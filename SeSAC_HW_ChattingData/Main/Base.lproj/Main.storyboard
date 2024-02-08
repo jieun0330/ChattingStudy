@@ -85,37 +85,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="T1X-rI-zoL">
-                                <rect key="frame" x="0.0" y="60" width="393" height="688"/>
+                                <rect key="frame" x="0.0" y="60" width="393" height="668"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rrk-Tn-RVS">
-                                <rect key="frame" x="20" y="748" width="353" height="50"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wya-rK-AB0">
+                                <rect key="frame" x="0.0" y="728" width="393" height="90"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rrk-Tn-RVS">
+                                        <rect key="frame" x="20" y="20" width="353" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Evc-Mz-NYZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8g-EV-kMl">
+                                        <rect key="frame" x="344" y="25" width="24" height="40"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title=""/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Evc-Mz-NYZ"/>
+                                    <constraint firstItem="Rrk-Tn-RVS" firstAttribute="bottom" secondItem="b8g-EV-kMl" secondAttribute="bottom" constant="5" id="DoZ-tZ-pxI"/>
+                                    <constraint firstItem="b8g-EV-kMl" firstAttribute="top" secondItem="Rrk-Tn-RVS" secondAttribute="top" constant="5" id="KLB-w0-A8Z"/>
+                                    <constraint firstItem="Rrk-Tn-RVS" firstAttribute="leading" secondItem="Wya-rK-AB0" secondAttribute="leading" constant="20" id="O1R-Kt-aw4"/>
+                                    <constraint firstAttribute="bottom" secondItem="Rrk-Tn-RVS" secondAttribute="bottom" constant="20" id="OBc-dg-7F7"/>
+                                    <constraint firstItem="Rrk-Tn-RVS" firstAttribute="trailing" secondItem="b8g-EV-kMl" secondAttribute="trailing" constant="5" id="QlE-Ra-ohQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Rrk-Tn-RVS" secondAttribute="trailing" constant="20" id="RQy-nh-1zb"/>
+                                    <constraint firstItem="Rrk-Tn-RVS" firstAttribute="top" secondItem="Wya-rK-AB0" secondAttribute="top" constant="20" id="kGz-ds-FET"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8g-EV-kMl">
-                                <rect key="frame" x="344" y="753" width="24" height="40"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title=""/>
-                            </button>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Ao-58-Vb7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="b8g-EV-kMl" firstAttribute="top" secondItem="T1X-rI-zoL" secondAttribute="bottom" constant="5" id="0Qj-j7-xZI"/>
-                            <constraint firstItem="Rrk-Tn-RVS" firstAttribute="top" secondItem="T1X-rI-zoL" secondAttribute="bottom" id="5T1-dS-5Zr"/>
-                            <constraint firstItem="6Ao-58-Vb7" firstAttribute="trailing" secondItem="Rrk-Tn-RVS" secondAttribute="trailing" constant="20" id="Cu3-Fb-5BF"/>
-                            <constraint firstItem="Rrk-Tn-RVS" firstAttribute="leading" secondItem="6Ao-58-Vb7" secondAttribute="leading" constant="20" id="IOb-tq-fVx"/>
+                            <constraint firstItem="Wya-rK-AB0" firstAttribute="trailing" secondItem="6Ao-58-Vb7" secondAttribute="trailing" id="8Hq-qA-h3g"/>
                             <constraint firstItem="T1X-rI-zoL" firstAttribute="top" secondItem="6Ao-58-Vb7" secondAttribute="top" constant="1" id="NRb-eH-2xa"/>
-                            <constraint firstItem="Rrk-Tn-RVS" firstAttribute="bottom" secondItem="b8g-EV-kMl" secondAttribute="bottom" constant="5" id="Npc-Ua-YGE"/>
                             <constraint firstItem="T1X-rI-zoL" firstAttribute="trailing" secondItem="6Ao-58-Vb7" secondAttribute="trailing" id="OZH-bH-RTj"/>
-                            <constraint firstItem="Rrk-Tn-RVS" firstAttribute="trailing" secondItem="b8g-EV-kMl" secondAttribute="trailing" constant="5" id="RHZ-er-qkf"/>
-                            <constraint firstItem="6Ao-58-Vb7" firstAttribute="bottom" secondItem="Rrk-Tn-RVS" secondAttribute="bottom" constant="20" id="cup-as-KbS"/>
+                            <constraint firstItem="6Ao-58-Vb7" firstAttribute="bottom" secondItem="Wya-rK-AB0" secondAttribute="bottom" id="boF-L1-CAQ"/>
+                            <constraint firstItem="Wya-rK-AB0" firstAttribute="top" secondItem="T1X-rI-zoL" secondAttribute="bottom" id="hgW-0x-UT4"/>
                             <constraint firstItem="T1X-rI-zoL" firstAttribute="leading" secondItem="6Ao-58-Vb7" secondAttribute="leading" id="tw1-jl-kHq"/>
+                            <constraint firstItem="Wya-rK-AB0" firstAttribute="leading" secondItem="6Ao-58-Vb7" secondAttribute="leading" id="uw2-c3-3VG"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="m2u-61-B57" appends="YES" id="EEL-vp-evo"/>

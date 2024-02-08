@@ -10,6 +10,7 @@ import UIKit
 class ChatScreenViewController: UIViewController, ReusableProtocol {
     
     @IBOutlet var chatView: UITableView!
+//    @IBOutlet var chatTextView: UIView!
     @IBOutlet var chatTextField: UITextField!
     @IBOutlet var sendButton: UIButton!
     
@@ -26,9 +27,25 @@ class ChatScreenViewController: UIViewController, ReusableProtocol {
         
     }
     
+//    override func viewWillAppear(_ animated: Bool) {
+//        self.addKeyboardNotifications()
+//    }
+    
     @IBAction func tapGestureTapped(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
+    
+//    func addKeyboardNotifications() {
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+//    }
+//    
+//    @objc func keyboardWillShow(_ noti: NSNotification) {
+//        if let keyboardFrame: NSValue = noti.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+//            let keyboardRectangle = keyboardFrame.cgRectValue
+//            let keyboardHeight = keyboardRectangle.height
+//            self.chatTextView.frame.origin.y -= keyboardHeight
+//        }
+//    }
     
     
 }
@@ -50,7 +67,7 @@ extension ChatScreenViewController {
         
         chatTextField.placeholder = "메세지를 입력하세요"
         chatTextField.backgroundColor = .systemGray6
-        chatTextField.delegate = self
+//        chatTextField.delegate = self
         
         sendButton.setImage(UIImage(systemName: "paperplane"), for: .normal)
         sendButton.tintColor = .lightGray
@@ -119,23 +136,23 @@ extension ChatScreenViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-extension ChatScreenViewController: UITextFieldDelegate {
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        if textField == self.chatTextField {
-            UIView.animate(withDuration: 0.3) {
-                let transform = CGAffineTransform(translationX: 0, y: -300)
-                textField.transform = transform
-            }
-        }
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        if textField == self.chatTextField {
-            UIView.animate(withDuration: 0.3) {
-                let transform = CGAffineTransform(translationX: 0, y: 0)
-                textField.transform = transform
-            }
-        }
-    }
-    
-}
+//extension ChatScreenViewController: UITextFieldDelegate {
+//    func textFieldDidBeginEditing(_ textField: UITextField) {
+//        if textField == self.chatTextField {
+//            UIView.animate(withDuration: 0.3) {
+//                let transform = CGAffineTransform(translationX: 0, y: -290)
+//                self.chatTextView.transform = transform
+//            }
+//        }
+//    }
+//    
+//    func textFieldDidEndEditing(_ textField: UITextField) {
+//        if textField == self.chatTextField {
+//            UIView.animate(withDuration: 0.3) {
+//                let transform = CGAffineTransform(translationX: 0, y: 0)
+//                self.chatTextView.transform = transform
+//            }
+//        }
+//    }
+//    
+//}
