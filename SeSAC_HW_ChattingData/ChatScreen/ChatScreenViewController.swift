@@ -10,6 +10,7 @@ import UIKit
 class ChatScreenViewController: UIViewController, ReusableProtocol {
     
     @IBOutlet var chatView: UITableView!
+    @IBOutlet var chatTextField: UITextField!
     
     var chatList: [Chat] = []
     var chatRoomName: String = ""
@@ -40,7 +41,9 @@ extension ChatScreenViewController {
         
         chatView.rowHeight = UITableView.automaticDimension
         
-
+        chatTextField.placeholder = "메세지를 입력하세요"
+        chatTextField.backgroundColor = .systemGray6
+        chatTextField.delegate = self
         
 
     }
@@ -77,14 +80,6 @@ extension ChatScreenViewController: UITableViewDelegate, UITableViewDataSource {
             let dateString = dateFormatter.string(from: date!)
             cell.dateLabel.text = dateString
             
-            cell.layer.borderColor = UIColor.red.cgColor
-            cell.layer.borderWidth = 1
-            
-            
-            
-//            chatView.rowHeight = UITableView.automaticDimension
-
-            
             
             return cell
         } else {
@@ -112,13 +107,15 @@ extension ChatScreenViewController: UITableViewDelegate, UITableViewDataSource {
         
         
     }
+}
 
-    
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 80
-        
-//        chatView.rowHeight = UITableView.automaticDimension
-//        return tableView.automatic
-        
-//    }
+extension ChatScreenViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == self.chatTextField {
+            UIView.animate(withDuration: 0.3) {
+                let transform = CGAffineTransform(translationX: 0, y: -330)
+                self.view.transform = transform
+            }
+        }
+    }
 }
