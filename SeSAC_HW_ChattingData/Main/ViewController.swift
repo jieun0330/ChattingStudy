@@ -19,12 +19,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         configureUI()
-        
-//        print(mockChatList[0].chatList[0].user)
-//        print(mockChatList[0].chatList[1].user)
-//        print(mockChatList[1].chatList[0].user.rawValue)
-
-        
     }
 }
 
@@ -39,18 +33,12 @@ extension ViewController {
         
         searchBar.placeholder = "친구 이름을 검색해보세요"
         searchBar.delegate = self
-        
-//        if searchBar.contains()
-        
+                
         talkView.delegate = self
         talkView.dataSource = self
         
         let xib = UINib(nibName: TravelTalkTableViewCell.identifier, bundle: nil)
         talkView.register(xib, forCellReuseIdentifier: TravelTalkTableViewCell.identifier)
-        
-//        talkView.rowHeight = UITableView.automaticDimension
-//        chatView.rowHeight = UITableView.automaticDimension
-
     }
     
 }
@@ -96,11 +84,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: TravelTalkTableViewCell.identifier, for: indexPath) as! TravelTalkTableViewCell
         
-//        if mockChatList[0].chatList[0].user.rawValue.contains(searchBar.text!) {
-//            talkView.reloadData()
-//            print("맞습니다")
-//        }
-        
         cell.selectionStyle = .none
         cell.profileImage.image = UIImage(named: mockChatList[indexPath.row].chatroomImage[0])
         cell.profileName.text = mockChatList[indexPath.row].chatroomName
@@ -128,7 +111,5 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         chatVC.chatList = mockChatList[indexPath.row].chatList
         
         navigationController?.pushViewController(chatVC, animated: true)
-    }
-
-    
+    }    
 }
