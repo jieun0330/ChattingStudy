@@ -85,7 +85,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="T1X-rI-zoL">
-                                <rect key="frame" x="0.0" y="59" width="393" height="689"/>
+                                <rect key="frame" x="0.0" y="60" width="393" height="688"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rrk-Tn-RVS">
@@ -103,7 +103,7 @@
                             <constraint firstItem="Rrk-Tn-RVS" firstAttribute="top" secondItem="T1X-rI-zoL" secondAttribute="bottom" id="5T1-dS-5Zr"/>
                             <constraint firstItem="6Ao-58-Vb7" firstAttribute="trailing" secondItem="Rrk-Tn-RVS" secondAttribute="trailing" constant="20" id="Cu3-Fb-5BF"/>
                             <constraint firstItem="Rrk-Tn-RVS" firstAttribute="leading" secondItem="6Ao-58-Vb7" secondAttribute="leading" constant="20" id="IOb-tq-fVx"/>
-                            <constraint firstItem="T1X-rI-zoL" firstAttribute="top" secondItem="6Ao-58-Vb7" secondAttribute="top" id="NRb-eH-2xa"/>
+                            <constraint firstItem="T1X-rI-zoL" firstAttribute="top" secondItem="6Ao-58-Vb7" secondAttribute="top" constant="1" id="NRb-eH-2xa"/>
                             <constraint firstItem="T1X-rI-zoL" firstAttribute="trailing" secondItem="6Ao-58-Vb7" secondAttribute="trailing" id="OZH-bH-RTj"/>
                             <constraint firstItem="6Ao-58-Vb7" firstAttribute="bottom" secondItem="Rrk-Tn-RVS" secondAttribute="bottom" constant="20" id="cup-as-KbS"/>
                             <constraint firstItem="T1X-rI-zoL" firstAttribute="leading" secondItem="6Ao-58-Vb7" secondAttribute="leading" id="tw1-jl-kHq"/>

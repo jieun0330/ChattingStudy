@@ -113,8 +113,8 @@ extension ChatScreenViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField == self.chatTextField {
             UIView.animate(withDuration: 0.3) {
-                let transform = CGAffineTransform(translationX: 0, y: -330)
-                self.view.transform = transform
+                let transform = CGAffineTransform(translationX: 0, y: -300)
+                textField.transform = transform
             }
         }
     }
