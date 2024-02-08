@@ -46,28 +46,28 @@ extension ViewController {
 extension ViewController: UISearchBarDelegate {
     
     // 서치바에 검색했을 때, 검색 결과에 해당하는 사용자만 목록에 보여주기
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
-        var filterChat: [ChatRoom] = []
-        
-        if searchBar.text == "" {
-            list = chat
-        } else {
-            for item in chat {
-                if item.chatList[0].user.rawValue.contains(searchBar.text!) {
-                    print("맞습니다")
-                    filterChat.append(item)
-                }
-            }
-            list = filterChat
-            print(list)
-            
-        }
+//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+//        
+//        var filterChat: [ChatRoom] = []
+//        
+//        if searchBar.text == "" {
+//            list = chat
+//        } else {
+//            for item in chat {
+//                if item.chatList[0].user.rawValue.contains(searchBar.text!) {
+//                    print("맞습니다")
+//                    filterChat.append(item)
+//                }
+//            }
+//            list = filterChat
+//            print(list)
+//            
+//        }
 //        if searchBar.text?.contains(mockChatList[0].chatList[0].user.rawValue) == true {
 //            
 //            print("맞습니다")
 //        }
-    }
+//    }
     
 }
 
