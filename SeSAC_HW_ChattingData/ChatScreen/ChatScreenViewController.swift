@@ -24,6 +24,12 @@ class ChatScreenViewController: UIViewController, ReusableProtocol {
         
         
     }
+    
+    @IBAction func tapGestureTapped(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
+    
 }
 
 extension ChatScreenViewController {
@@ -118,4 +124,14 @@ extension ChatScreenViewController: UITextFieldDelegate {
             }
         }
     }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField == self.chatTextField {
+            UIView.animate(withDuration: 0.3) {
+                let transform = CGAffineTransform(translationX: 0, y: 0)
+                textField.transform = transform
+            }
+        }
+    }
+    
 }
