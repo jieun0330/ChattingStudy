@@ -136,6 +136,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="qfO-vl-tNs"/>
                     <connections>
+                        <outlet property="chatBorderView" destination="Wya-rK-AB0" id="Cn3-pe-F3f"/>
                         <outlet property="chatTextView" destination="jE9-CX-0Mz" id="Db3-HG-LGZ"/>
                         <outlet property="chatView" destination="T1X-rI-zoL" id="ftC-c9-vbe"/>
                         <outlet property="sendButton" destination="b8g-EV-kMl" id="W7T-9F-qpU"/>

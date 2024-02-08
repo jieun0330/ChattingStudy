@@ -21,17 +21,8 @@ class TravelTalkTableViewCell: UITableViewCell, ReusableProtocol {
         profileImage.layer.masksToBounds = true
         profileImage.layer.cornerRadius = profileImage.frame.height / 2
         profileImage.clipsToBounds = true
-        
         profileImage.layer.borderColor = UIColor.gray.cgColor
         profileImage.layer.borderWidth = 1
-//        chatBorder.layer.cornerRadius = 8
-        
-//        profileImage.contentMode = .scaleAspectFit
-//        profileImage.layer.masksToBounds = true
-//        profileImage.layer.cornerRadius = profileImage.frame.height / 2
-//        profileImage.clipsToBounds = true
-//        profileImage.layer.borderColor = UIColor.gray.cgColor
-//        profileImage.layer.borderWidth = 0.3
         
         profileName.font = UIFont.boldSystemFont(ofSize: 16)
         

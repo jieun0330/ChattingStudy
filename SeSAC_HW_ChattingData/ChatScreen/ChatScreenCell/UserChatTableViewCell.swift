@@ -22,6 +22,5 @@ class UserChatTableViewCell: UITableViewCell, ReusableProtocol {
         chatBorder.backgroundColor = .systemGray4
         
         userChat.font = UIFont.systemFont(ofSize: 14)
-                
     }    
 }

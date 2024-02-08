@@ -14,7 +14,7 @@ class ChatScreenTableViewCell: UITableViewCell, ReusableProtocol {
     @IBOutlet var chatLabel: UILabel!
     @IBOutlet var chatBorder: UILabel!
     @IBOutlet var chatDate: UILabel!
-        
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
