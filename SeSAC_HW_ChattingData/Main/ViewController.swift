@@ -12,13 +12,17 @@ class ViewController: UIViewController {
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var talkView: UITableView!
     
-    let chat = mockChatList
-    var list: [ChatRoom] = mockChatList
+    var chatRoomList: [ChatRoom] = mockChatList {
+        didSet {
+            talkView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configureUI()
+
     }
 }
 
@@ -46,28 +50,55 @@ extension ViewController {
 extension ViewController: UISearchBarDelegate {
     
     // 서치바에 검색했을 때, 검색 결과에 해당하는 사용자만 목록에 보여주기
-//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//        
-//        var filterChat: [ChatRoom] = []
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        var searchedChat: [ChatRoom] = []
+        
+        if searchBar.text == "" {
+            chatRoomList = mockChatList
+        } else {
+            for chatroom in chatRoomList {
+                if chatroom.chatroomName.contains(searchBar.text!) {
+                    searchedChat.append(chatroom)
+                }
+            }
+            chatRoomList = searchedChat
+            print(chatRoomList)
+
+        }
+//        var searchedUserChat: [ChatRoom] = []
 //        
 //        if searchBar.text == "" {
-//            list = chat
+//            chatRoomList = mockChatList
 //        } else {
-//            for item in chat {
-//                if item.chatList[0].user.rawValue.contains(searchBar.text!) {
-//                    print("맞습니다")
-//                    filterChat.append(item)
+//            
+//            // chatroomlist에 있는 chatroom 꺼내오기
+//            for chatroom in chatRoomList {
+//                // ⭐️ searchedUserChat 쓴 곳에 안쓰고 여기 써야 하는 이유
+//                var usersInChat: [String] = []
+//
+//                // chatroom 안에 있는 chat 꺼내오기
+//                for chat in chatroom.chatList {
+//                    // chat안에 있는 user 빈배열에 넣기
+//                    usersInChat.append(chat.user.rawValue)
 //                }
+//                // 배열안에 넣은 유저 반복문 돌리기
+//                for user in usersInChat {
+//                    // 검색한 user가 user에 속해있다면
+//                    if user.contains(searchBar.text!) {
+//                        // 속한 채팅방을 새로운 배열안에 넣어주기
+//                        searchedUserChat.append(chatroom)
+//                        // ⭐️ break를 써야하는 이유
+//                        break
+//                        print(searchedUserChat)
+//                    }
+//                }
+//
 //            }
-//            list = filterChat
-//            print(list)
-//            
+//            chatRoomList = searchedUserChat
 //        }
-//        if searchBar.text?.contains(mockChatList[0].chatList[0].user.rawValue) == true {
-//            
-//            print("맞습니다")
-//        }
-//    }
+
+    }
     
 }
 
@@ -75,7 +106,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     // section의 개수
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        mockChatList.count
+        chatRoomList.count
         
     }
     
@@ -85,15 +116,15 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: TravelTalkTableViewCell.identifier, for: indexPath) as! TravelTalkTableViewCell
         
         cell.selectionStyle = .none
-        cell.profileImage.image = UIImage(named: mockChatList[indexPath.row].chatroomImage[0])
-        cell.profileName.text = mockChatList[indexPath.row].chatroomName
+        cell.profileImage.image = UIImage(named: chatRoomList[indexPath.row].chatroomImage[0])
+        cell.profileName.text = chatRoomList[indexPath.row].chatroomName
         // 최근 메세지로 보여주게 하기
-        cell.talkLabel.text = mockChatList[indexPath.row].chatList.last!.message
+        cell.talkLabel.text = chatRoomList[indexPath.row].chatList.last!.message
         cell.talkLabel.numberOfLines = 0
         
         let stringFormatter = DateFormatter()
         stringFormatter.dateFormat = "yyyy-MM-dd HH:mm"
-        let date = stringFormatter.date(from: mockChatList[indexPath.row].chatList.last!.date)
+        let date = stringFormatter.date(from: chatRoomList[indexPath.row].chatList.last!.date)
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yy.MM.dd"
         let dateString = dateFormatter.string(from: date!)
@@ -107,8 +138,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let chatSB = UIStoryboard(name: "Main", bundle: nil)
         let chatVC = chatSB.instantiateViewController(identifier: ChatScreenViewController.identifier) as! ChatScreenViewController
-        chatVC.chatRoomName = mockChatList[indexPath.row].chatroomName
-        chatVC.chatList = mockChatList[indexPath.row].chatList
+        chatVC.chatRoomName = chatRoomList[indexPath.row].chatroomName
+        chatVC.chatList = chatRoomList[indexPath.row].chatList
         
         navigationController?.pushViewController(chatVC, animated: true)
     }    
